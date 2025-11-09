@@ -1,0 +1,24 @@
+.list {
+  display: flex; 
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  
+
+  .item {
+    flex-grow: 1;
+
+    position: relative;
+    width: 100%;
+
+    margin: 10px;
+
+    .button {
+      width: 100%;
+      flex-grow: 1;
+    }
+  }
+}
