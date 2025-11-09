@@ -10,7 +10,7 @@ const RoomList = () => {
 			{rooms.map(({ id, name }) => (
 				<li key={id} className={styles.item}>
 					<Button
-						href={`/rooms/${id}`}
+						href={`/room/${id}`}
 						variant="contained"
 						className={styles.button}
 					>
