@@ -10,6 +10,9 @@ type Props = {
 };
 
 const RoomHeader = ({ id, title }: Props) => {
+	const onShare = () => {
+		console.log(id);
+	};
 	return (
 		<div className={styles.header}>
 			<ul className={styles.list}>
@@ -24,7 +27,7 @@ const RoomHeader = ({ id, title }: Props) => {
 					</IconButton>
 				</li>
 				<li>
-					<IconButton aria-label="share" size="large">
+					<IconButton aria-label="share" size="large" onClick={onShare}>
 						<IosShareIcon />
 					</IconButton>
 				</li>
