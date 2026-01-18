@@ -17,6 +17,10 @@
   .titleWrapper {
     position: relative;
     display: inline-block;
+    
+    @media (max-width: 768px) {
+      width: min-content;
+    }
   }
 
   .dot {
