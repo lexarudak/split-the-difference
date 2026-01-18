@@ -4,13 +4,14 @@ import { Button } from "@mui/material";
 
 const RoomList = () => {
 	const rooms = RoomsService.getRoomsList();
+	console.log("ss");
 
 	return (
 		<ul className={styles.list}>
 			{rooms.map(({ id, name }) => (
 				<li key={id} className={styles.item}>
 					<Button
-						href={`/room/${id}`}
+						href={`/c/room/${id}`}
 						variant="contained"
 						className={styles.button}
 					>

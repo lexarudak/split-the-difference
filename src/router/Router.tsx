@@ -1,14 +1,34 @@
 import { createBrowserRouter } from "react-router";
 import HomePage from "../pages/home-page/Home";
 import RoomPage from "../pages/room-page/RoomPage";
+import { RouterPaths } from "./router-constants";
+import LoginPage from "../pages/login-page/LoginPage";
+import { Root } from "../pages/root/Root";
+import RoomList from "../components/room-list/RoomList";
 
 export const router = createBrowserRouter([
 	{
-		path: "/",
-		element: <HomePage />,
+		path: RouterPaths.Home,
+		element: <Root />,
+		children: [
+			{
+				path: RouterPaths.BasePath,
+				element: <HomePage />,
+				children: [
+					{
+						path: RouterPaths.RoomList,
+						element: <RoomList />,
+					},
+					{
+						path: RouterPaths.Room,
+						element: <RoomPage />,
+					},
+				],
+			},
+		],
 	},
 	{
-		path: "/room/:roomId",
-		element: <RoomPage />,
+		path: RouterPaths.Login,
+		element: <LoginPage />,
 	},
 ]);

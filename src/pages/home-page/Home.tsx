@@ -1,20 +1,14 @@
-import LoadingSpinner from "../../components/LoadingSpinner";
-import RoomList from "../../components/room-list/RoomList";
-import { useAuth } from "../../hooks/useAuth";
-import LoginPage from "../login-page/LoginPage";
+import { Outlet } from "react-router";
 
 const HomePage = () => {
-	const { user, loading } = useAuth();
-
-	if (loading) {
-		return <LoadingSpinner />;
-	}
-
-	if (!user) {
-		return <LoginPage />;
-	}
-
-	return <RoomList />;
+	return (
+		<>
+			<header>AAAA</header>
+			<main>
+				<Outlet />
+			</main>
+		</>
+	);
 };
 
 export default HomePage;

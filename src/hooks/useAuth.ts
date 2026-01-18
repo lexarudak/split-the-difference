@@ -17,7 +17,7 @@ export const useAuth = () => {
 			setLoading(false);
 		});
 
-		return () => unsubscribe();
+		return unsubscribe;
 	}, []);
 
 	const signInWithGoogle = async () => {
