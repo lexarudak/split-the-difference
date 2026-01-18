@@ -1,6 +1,4 @@
-import { Typography } from "@mui/material";
 import { useAuthStore } from "../../store/auth-store";
-import Button from "@mui/material/Button";
 import styles from "./styles.module.css";
 import {
 	selectIsLoading,
@@ -21,19 +19,11 @@ const LoginPage = () => {
 
 	return (
 		<div className={styles.container}>
-			<Typography variant="h2" className={styles.title}>
-				Split the Difference
-			</Typography>
-			<Typography variant="body2" className={styles.subtitle}>
-				Войдите, чтобы продолжить
-			</Typography>
-			<Button
-				variant="contained"
-				loading={isLoading}
-				onClick={signInWithGoogle}
-			>
-				Войти через Google
-			</Button>
+			<h2 className={styles.title}>Split the Difference</h2>
+			<p className={styles.subtitle}>Войдите, чтобы продолжить</p>
+			<button disabled={isLoading} onClick={signInWithGoogle}>
+				{isLoading ? "Загрузка..." : "Войти через Google"}
+			</button>
 		</div>
 	);
 };

@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import type { PersonalData } from "../../types";
 import styles from "./styles.module.css";
 import CalculateSection from "../calculate-section/CalculateSection";
@@ -12,9 +11,7 @@ const IndividualForm = ({
 }: PersonalData) => {
 	return (
 		<div className={styles.individualForm}>
-			<Typography variant="h3" fontWeight="bold" fontSize="medium">
-				{name}
-			</Typography>
+			<h3>{name}</h3>
 			<CalculateSection title="Income" items={income} />
 			<CalculateSection
 				title="Constant Income"
