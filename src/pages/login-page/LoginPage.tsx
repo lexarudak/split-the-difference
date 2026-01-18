@@ -7,6 +7,7 @@ import {
 } from "../../store/auth-selectors";
 import { Navigate } from "react-router";
 import { RouterPaths } from "../../router/router-constants";
+import Button from "../../components/shared/button";
 
 const LoginPage = () => {
 	const user = useAuthStore(selectUser);
@@ -19,11 +20,14 @@ const LoginPage = () => {
 
 	return (
 		<div className={styles.container}>
-			<h2 className={styles.title}>Split the Difference</h2>
-			<p className={styles.subtitle}>Войдите, чтобы продолжить</p>
-			<button disabled={isLoading} onClick={signInWithGoogle}>
-				{isLoading ? "Загрузка..." : "Войти через Google"}
-			</button>
+			<h1 className={styles.title}>split the difference</h1>
+			<Button
+				disabled={isLoading}
+				onClick={signInWithGoogle}
+				variant="no-border"
+			>
+				Sign in with Google
+			</Button>
 		</div>
 	);
 };

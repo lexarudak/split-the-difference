@@ -2,11 +2,10 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: rgb(222, 120, 189);
+  background-color: rgb(32 27 32);
   min-height: calc(100vh - 80px);
   align-items: center;
   justify-content: center;
-  padding: 40px;
 
   #root {
     width: 100%;
@@ -18,7 +17,7 @@ body {
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Mono', monospace;
   line-height: 1.5;
   font-weight: 400;
 
