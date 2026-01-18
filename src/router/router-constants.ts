@@ -2,6 +2,6 @@ export const RouterPaths = {
 	Home: "/",
 	BasePath: "/c",
 	RoomList: "/c/rooms",
-	Room: "/c/room/:roomId",
+	Room: "/c/rooms/:roomId",
 	Login: "/login",
 };

@@ -4,7 +4,7 @@ import RoomPage from "../pages/room-page/RoomPage";
 import { RouterPaths } from "./router-constants";
 import LoginPage from "../pages/login-page/LoginPage";
 import { Root } from "../pages/root/Root";
-import RoomList from "../components/room-list/RoomList";
+import RoomList from "../pages/room-list/RoomList";
 
 export const router = createBrowserRouter([
 	{
@@ -18,10 +18,12 @@ export const router = createBrowserRouter([
 					{
 						path: RouterPaths.RoomList,
 						element: <RoomList />,
-					},
-					{
-						path: RouterPaths.Room,
-						element: <RoomPage />,
+						children: [
+							{
+								path: RouterPaths.Room,
+								element: <RoomPage />,
+							},
+						],
 					},
 				],
 			},
