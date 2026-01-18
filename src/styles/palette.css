@@ -1,0 +1,24 @@
+:root {
+  /* Primary Colors */
+  --color-primary: #fe00d3;
+
+  --color-secondary: wheat;
+
+  --color-background: rgb(32 27 32);
+  --color-background-light: #2a222a;
+  
+  
+  /* Surface Colors */
+  --color-surface: #fff;
+  --color-surface-disabled: rgb(254, 199, 199);
+  
+  /* Loading Spinner Colors */
+  --color-spinner-track: #f3f3f3;
+  --color-spinner-active: #4285f4;
+  
+  /* Text Colors */
+  --color-text-muted: #666;
+  
+  /* Shadows */
+  --shadow-card: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}

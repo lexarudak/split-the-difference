@@ -14,19 +14,15 @@ const LoadingSpinner = () => {
 				style={{
 					width: "40px",
 					height: "40px",
-					border: "4px solid #f3f3f3",
-					borderTop: "4px solid #4285f4",
-					borderRadius: "50%",
-					animation: "spin 1s linear infinite",
-					marginBottom: "20px",
-				}}
-			></div>
+				border: "4px solid var(--color-spinner-track)",
+				borderTop: "4px solid var(--color-spinner-active)",
+				borderRadius: "50%",
+				animation: "spin 1s linear infinite",
+				marginBottom: "20px",
+			}}
+		></div>
 
-			<p style={{ color: "#666" }}>Загрузка...</p>
-
-			<style>{`
-        @keyframes spin {
-          0% { transform: rotate(0deg); }
+		<p style={{ color: "var(--color-text-muted)" }}>Загрузка...</p>
           100% { transform: rotate(360deg); }
         }
       `}</style>

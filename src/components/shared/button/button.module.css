@@ -1,37 +1,26 @@
 
 .button {
     background: none;
-    color: wheat;
-    border: navajowhite;
+    border: transparent;
     font-family: 'Roboto Mono';
     cursor: pointer;
-    transition: opacity .3s;
-    position: relative;
+    transition: .1s;
     padding: 10px 20px;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 20.5px;
-        left: 20.5px;
-        width: 6px;
-        height: 6px;
+
+
+    &.no-border {
+        color: var(--color-secondary);
+        background-color: var(--color-background);
         border-radius: 4px;
-        background-color: wheat;
-        opacity: 0;
-        transition: .3s;
-        pointer-events: none;
-    }
 
-    &:hover {
-        &::before {
-          transform: translateY(-22px);
-            opacity: 1;
+        &:hover:not(:disabled) {
+            background-color: var(--color-background-light);
         }
-    }
 
-    &:disabled {
+      &:disabled {
         cursor: not-allowed;
         color: gray;
+      }
     }
 }

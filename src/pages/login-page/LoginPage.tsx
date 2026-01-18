@@ -20,7 +20,12 @@ const LoginPage = () => {
 
 	return (
 		<div className={styles.container}>
-			<h1 className={styles.title}>split the difference</h1>
+			<h1 className={styles.title}>
+				<span className={styles.titleWrapper}>
+					<span className={styles.dot}></span>
+					split the difference
+				</span>
+			</h1>
 			<Button
 				disabled={isLoading}
 				onClick={signInWithGoogle}
