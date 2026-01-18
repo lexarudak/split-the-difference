@@ -1,12 +1,14 @@
 import { Navigate, Outlet } from "react-router";
-import { useAuth } from "../hooks/useAuth";
+import { selectIsLoading, selectUser } from "../store/auth-selectors";
 import LoadingSpinner from "./LoadingSpinner";
 import { RouterPaths } from "../router/router-constants";
+import { useAuthStore } from "../store/auth-store";
 
 export const ProtectedRoute = () => {
-	const { loading, user } = useAuth();
+	const isLoading = useAuthStore(selectIsLoading);
+	const user = useAuthStore(selectUser);
 
-	if (loading) {
+	if (isLoading) {
 		return <LoadingSpinner />;
 	}
 
